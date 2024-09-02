@@ -124,3 +124,21 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# STATIC & MEDIA FIELS CONF
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']  # This tells Django where to look for static files during development
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # This is where static files will be collected during production
+
+
+
+
+
